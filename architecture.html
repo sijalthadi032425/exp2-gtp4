@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Architecture</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #ffffff; 
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .mermaid { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>System Architecture: AI-Powered Blog Generator</h2>
+        <div class="mermaid">
+            graph TD
+                A([User Input]) --> B([Intent Detection <br> Ollama])
+                B --> C([Title Generation])
+                B --> D([Blog Generation])
+                B --> E([Summary Generation])
+                C --> F([SEO Meta Description])
+                D --> F
+                E --> F
+                F --> G([Save Blog])
+                G --> H([Natural Language Response])
+                
+                classDef blue fill:#e7f1ff,stroke:#0d6efd,stroke-width:2px,color:#000;
+                classDef green fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000;
+                classDef yellow fill:#fff8e1,stroke:#f57f17,stroke-width:2px,color:#000;
+                classDef purple fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000;
+                classDef red fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000;
+                classDef teal fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000;
+
+                class A blue;
+                class B green;
+                class C yellow;
+                class D purple;
+                class E red;
+                class F teal;
+                class G yellow;
+                class H blue;
+        </div>
+        <p style="margin-top:20px; color:#666;"><em>* Take a screenshot of this diagram to insert into your lab record.</em></p>
+    </div>
+</body>
+</html>
